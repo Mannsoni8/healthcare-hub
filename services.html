@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - HealthCare Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+      
+  <style>
+    body {
+      padding-top: 70px; /* For fixed navbar spacing */
+    }
+    .hero {
+      background-color: #343a40;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .service-card {
+      transition: transform 0.2s ease;
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">HealthCare Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" 
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="form.html" id="authLink">
+                <img src="" alt="Profile" id="profilePic" class="rounded-circle" width="30" height="30" style="display: none;">
+                <span id="authText">Login/Sign In</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Our Comprehensive Services</h1>
+      <p>Delivering a wide range of healthcare services to keep you healthy and safe.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <main class="container my-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">General Check-ups</h5>
+            <p class="card-text">Regular health screenings and preventive care.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Specialist Consultations</h5>
+            <p class="card-text">Expert consultations from top healthcare professionals.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Diagnostic Services</h5>
+            <p class="card-text">Advanced diagnostic tests and imaging services.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Therapeutic Treatments</h5>
+            <p class="card-text">Personalized treatment plans and therapies.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Emergency Care</h5>
+            <p class="card-text">24/7 emergency medical services for critical care.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Telemedicine Services</h5>
+            <p class="card-text">Remote consultations via video and phone.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Mental Health Counseling</h5>
+            <p class="card-text">Counseling and support for mental well-being.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Physical Therapy</h5>
+            <p class="card-text">Rehabilitation and recovery programs tailored to your needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Nutrition & Diet Planning</h5>
+            <p class="card-text">Personalized diet plans to maintain optimal health.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Vaccinations & Immunizations</h5>
+            <p class="card-text">Essential vaccines to protect you and your family.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center p-3 mt-4">
+    <p>© 2024 HealthCare Inc.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-rbsA0spTzPBOlH2w8nUM0XHutQfK2zYF9q2zYATd6Y5E5qvN90VfTt0Vf6YjeV6P" 
+          crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const isSignedIn = localStorage.getItem('isSignedIn') === 'true';
+      const profilePic = localStorage.getItem('userProfilePic');
+      if (isSignedIn && profilePic) {
+        document.getElementById('profilePic').src = profilePic;
+        document.getElementById('profilePic').style.display = 'block';
+        document.getElementById('authText').style.display = 'none';
+      }
+
+      window.addEventListener('storage', function(event) {
+        if (event.key === 'isSignedIn' || event.key === 'userProfilePic') {
+          location.reload();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

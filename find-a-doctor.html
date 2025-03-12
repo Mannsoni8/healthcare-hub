@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Doctor - HealthCare Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+</head>
+<body>
+  <!-- Navbar -->
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">HealthCare Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" 
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="find-a-doctor.html">Find a Doctor</a>
+            </li>
+          </ul>
+          
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="form.html" id="authLink">
+                <img src="" alt="Profile" id="profilePic" class="rounded-circle" width="30" height="30" style="display: none;">
+                <span id="authText">Login/Sign In</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+    <h1 class="mb-4">Find a Doctor</h1>
+    <input type="text" id="doctorSearchBar" class="form-control mb-4" placeholder="Search for a doctor...">
+    <div class="row" id="doctorList">
+      <!-- Doctor Cards -->
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Doe</h5>
+            <p class="card-text"><strong>Fee:</strong> $100</p>
+            <p class="card-text"><strong>Type:</strong> General Practitioner</p>
+            <p class="card-text"><strong>Specialities:</strong> Family Medicine, Preventive Care</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Jane Smith</h5>
+            <p class="card-text"><strong>Fee:</strong> $150</p>
+            <p class="card-text"><strong>Type:</strong> Cardiologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Heart Disease, Hypertension</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Emily Johnson</h5>
+            <p class="card-text"><strong>Fee:</strong> $200</p>
+            <p class="card-text"><strong>Type:</strong> Neurologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Brain Disorders, Stroke</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Alice Johnson</h5>
+            <p class="card-text"><strong>Fee:</strong> $180</p>
+            <p class="card-text"><strong>Type:</strong> Pediatrician</p>
+            <p class="card-text"><strong>Specialities:</strong> Child Health, Immunizations</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Bob Smith</h5>
+            <p class="card-text"><strong>Fee:</strong> $220</p>
+            <p class="card-text"><strong>Type:</strong> Orthopedic Surgeon</p>
+            <p class="card-text"><strong>Specialities:</strong> Sports Injuries, Joint Replacement</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Carol Lee</h5>
+            <p class="card-text"><strong>Fee:</strong> $160</p>
+            <p class="card-text"><strong>Type:</strong> Dermatologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Skin Care, Cosmetic Treatments</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. David Brown</h5>
+            <p class="card-text"><strong>Fee:</strong> $190</p>
+            <p class="card-text"><strong>Type:</strong> Endocrinologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Diabetes, Hormonal Disorders</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Emma Davis</h5>
+            <p class="card-text"><strong>Fee:</strong> $210</p>
+            <p class="card-text"><strong>Type:</strong> Gastroenterologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Digestive Health, Liver Diseases</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Frank Miller</h5>
+            <p class="card-text"><strong>Fee:</strong> $230</p>
+            <p class="card-text"><strong>Type:</strong> Oncologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Cancer Treatment, Chemotherapy</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Grace Wilson</h5>
+            <p class="card-text"><strong>Fee:</strong> $170</p>
+            <p class="card-text"><strong>Type:</strong> Rheumatologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Arthritis, Autoimmune Diseases</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Henry Clark</h5>
+            <p class="card-text"><strong>Fee:</strong> $250</p>
+            <p class="card-text"><strong>Type:</strong> Plastic Surgeon</p>
+            <p class="card-text"><strong>Specialities:</strong> Reconstructive Surgery, Cosmetic Surgery</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Laura White</h5>
+            <p class="card-text"><strong>Fee:</strong> $180</p>
+            <p class="card-text"><strong>Type:</strong> Ophthalmologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Eye Care, Vision Correction</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Michael Green</h5>
+            <p class="card-text"><strong>Fee:</strong> $200</p>
+            <p class="card-text"><strong>Type:</strong> Psychiatrist</p>
+            <p class="card-text"><strong>Specialities:</strong> Mental Health, Anxiety Disorders</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 searchable-doctor">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Nancy Adams</h5>
+            <p class="card-text"><strong>Fee:</strong> $220</p>
+            <p class="card-text"><strong>Type:</strong> Pulmonologist</p>
+            <p class="card-text"><strong>Specialities:</strong> Lung Diseases, Asthma</p>
+            <a href="book-appointment.html" class="btn btn-primary" onclick="checkSignIn(event)">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more doctors dynamically if needed -->
+    </div>
+  </main>
+
+  <footer class="bg-light text-center p-3 mt-4">
+    <p>© 2024 HealthCare Inc.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+  crossorigin="anonymous"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const isSignedIn = localStorage.getItem('isSignedIn') === 'true';
+      const profilePic = localStorage.getItem('userProfilePic');
+      const authText = document.getElementById('authText');
+      const profileImg = document.getElementById('profilePic');
+
+      // Update profile UI based on login state
+      if (isSignedIn && profilePic) {
+        profileImg.src = profilePic;
+        profileImg.style.display = 'block';
+        authText.style.display = 'none';
+      } else {
+        profileImg.style.display = 'none';
+        authText.style.display = 'inline';
+      }
+
+      // Listen for localStorage changes without reloading
+      window.addEventListener('storage', function(event) {
+        if (event.key === 'isSignedIn' || event.key === 'userProfilePic') {
+          const newSignInState = localStorage.getItem('isSignedIn') === 'true';
+          const newProfilePic = localStorage.getItem('userProfilePic');
+
+          if (newSignInState && newProfilePic) {
+            profileImg.src = newProfilePic;
+            profileImg.style.display = 'block';
+            authText.style.display = 'none';
+          } else {
+            profileImg.style.display = 'none';
+            authText.style.display = 'inline';
+          }
+        }
+      });
+
+      // Search functionality
+      document.getElementById('doctorSearchBar').addEventListener('input', function(event) {
+        const query = event.target.value.toLowerCase();
+        document.querySelectorAll('.searchable-doctor').forEach(doctor => {
+          const text = doctor.innerText.toLowerCase();
+          doctor.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
+    });
+
+    function checkSignIn(event) {
+      if (localStorage.getItem('isSignedIn') !== 'true') {
+        event.preventDefault();
+        window.location.href = 'form.html';
+      }
+    }
+  </script>
+</body>
+</html>
